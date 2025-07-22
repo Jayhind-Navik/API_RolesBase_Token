@@ -1,6 +1,6 @@
 OUTPUT
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/57a8e49d-faa0-40b2-9270-f79c92ba8b11" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/96e5cd20-50aa-4fd7-862f-818951cba3cf" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bd0330b7-926f-4335-94c4-70bfe405d03f" />
 
 //And write the following code Bearer testing Boxxx
 builder.Services.AddSwaggerGen(c =>
