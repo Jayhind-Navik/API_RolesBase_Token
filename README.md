@@ -1,4 +1,4 @@
-OUTPUT
+OUTPUT                 =========    Login/Logout Using IdentityUser    ==============
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/57a8e49d-faa0-40b2-9270-f79c92ba8b11" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bd0330b7-926f-4335-94c4-70bfe405d03f" />
 
@@ -33,3 +33,19 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+
+// Seed Roles
+using (var scope = app.Services.CreateScope())
+{
+    var rolemanager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    if (!await rolemanager.RoleExistsAsync("User"))
+    {
+        await rolemanager.CreateAsync(new IdentityRole("User"));
+    }
+    if (!await rolemanager.RoleExistsAsync("Admin"))
+    {
+        await rolemanager.CreateAsync(new IdentityRole("Admin"));
+    }
+}
+
+app.Run();
